@@ -1,0 +1,16 @@
+syntax = "proto3";
+import "protogen/options.proto";
+import "google/protobuf/wrappers.proto";
+option java_package = "migrated.class.package.here";
+option optimize_for = SPEED;
+option (protogen.enable) = true;
+option java_multiple_files = true;
+
+message GrpcMyClassList {
+  repeated GrpcMyClass classInstances = 1;
+}
+
+message GrpcMyClass {
+  optional string attribute_1 = 1;
+  optional int32 attribute_2 = 2;
+}
